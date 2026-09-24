@@ -1,0 +1,56 @@
+name: validate
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  grader-discrimination:
+    name: Reference, honest variant and wrong answers through the real verifier
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install numpy==1.26.4 scipy==1.11.4
+      - run: python3 validation/run_validation.py
+
+  generator-reproducibility:
+    name: Seeded generator rebuilds the data and the key byte for byte
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install numpy==1.26.4
+      - run: |
+          cp -r task /tmp/regen
+          (cd /tmp/regen/tests && python3 build.py)
+          diff -r /tmp/regen/environment/data task/environment/data
+          cmp /tmp/regen/tests/answer_key.json task/tests/answer_key.json
+
+  docker-oracle:
+    name: Build both images and grade the oracle in the verifier container
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build -t np-env task/environment
+      - run: docker build -t np-tests task/tests
+      - name: Run the oracle in the agent image
+        run: |
+          mkdir -p out
+          docker run --rm -v "$PWD/task/solution:/solution:ro" -v "$PWD/out:/out" np-env \
+            sh -c "bash /solution/solve.sh && cp /app/answer.csv /app/sampling_rates.csv /out/"
+      - name: Grade it in the verifier image (expects reward 1)
+        run: |
+          reward=$(docker run --rm -v "$PWD/out/answer.csv:/app/answer.csv:ro" \
+            -v "$PWD/out/sampling_rates.csv:/app/sampling_rates.csv:ro" np-tests \
+            sh -c "bash /tests/test.sh >/dev/null 2>&1; cat /logs/verifier/reward.txt")
+          echo "reward=$reward"; test "$reward" = "1"
+      - name: Grade a missing submission (expects reward 0)
+        run: |
+          reward=$(docker run --rm np-tests \
+            sh -c "bash /tests/test.sh >/dev/null 2>&1; cat /logs/verifier/reward.txt")
+          echo "reward=$reward"; test "$reward" = "0"

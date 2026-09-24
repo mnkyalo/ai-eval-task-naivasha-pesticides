@@ -1,0 +1,98 @@
+{
+ "graded_quantity": "30-day time-weighted average freely dissolved concentration, 19 compounds x 3 sites, plus 3 fitted F",
+ "version": "v5 -- v3 silicone design (four nested sets, PRC calibration, declining concentration) plus co-deployed Speedisks with a DOC-associated uptake excess proportional to Kpw; five hydrophobic legacy organochlorines added (HCB, cis- and trans-chlordane, trans-nonachlor, mirex) so every site carries at least five compounds the sheets still integrate; Speedisk replicate RSD 0.05",
+ "tolerance": {
+  "cw_rel": 0.2,
+  "cw_min_pass": 54,
+  "cw_total": 57,
+  "F_rel": 0.1
+ },
+ "key": "generator truth (true 30-day TWA, true F), written by build.py; reference reads no generating parameter and sits 2.0% median / 5.7% worst from it; optimum identical from three starting points",
+ "honest_methods": {
+  "reference_joint_fit_shared_decline_G_phi": {
+   "median_err_pct": 2.0,
+   "worst_err_pct": 5.7,
+   "within_20pct": "57/57",
+   "seed_sweep_24": "24/24"
+  },
+  "split_deq0.3_windows_G_phi_linear_in_Kpw": {
+   "median_err_pct": 2.7,
+   "worst_err_pct": 9.9,
+   "within_20pct": "57/57",
+   "seed_sweep_24": "23/24"
+  },
+  "split_deq0.5_windows_G_phi": {
+   "median_err_pct": 3.1,
+   "worst_err_pct": 11.2,
+   "within_20pct": "57/57",
+   "seed_sweep_24": "24/24"
+  },
+  "split_deq0.3_setD_full_equation_G_phi": {
+   "median_err_pct": 2.4,
+   "worst_err_pct": 11.8,
+   "within_20pct": "57/57",
+   "seed_sweep_24": "24/24"
+  },
+  "speedisk_for_all_compounds_G_phi": {
+   "median_err_pct": 2.9,
+   "worst_err_pct": 8.5,
+   "within_20pct": "57/57",
+   "seed_sweep_24": "24/24"
+  },
+  "split_deq0.5_free_exponent_1+phi*Kpw^b": {
+   "median_err_pct": 5.6,
+   "worst_err_pct": 20.2,
+   "within_20pct": "56/57",
+   "seed_sweep_24": "21/24",
+   "note": "over-parameterised on 5-10 calibration points; the marginal honest route"
+  },
+  "v3_route_shared_profile_sheets_disks_unmodelled": {
+   "median_err_pct": 2.9,
+   "worst_err_pct": 10.5,
+   "within_20pct": "57/57",
+   "seed_sweep_24": "24/24",
+   "note": "passes because the shared decline recovers the fast compounds from the sheets; the enhanced disks only add residuals"
+  }
+ },
+ "independent_solvers": {
+  "note": "three fresh Fable agents, no design context, solver-facing files only",
+  "solver_1_joint_exponential_profile_G_(1+a*Kpw)": {
+   "median_err_pct": 2.0,
+   "worst_err_pct": 5.8,
+   "within_20pct": "57/57",
+   "reward": 1
+  },
+  "solver_2_G_on_logKpw<=4.6_only_sheets_for_hydrophobic": {
+   "concentrations": "correct route",
+   "reward": 0,
+   "note": "reported F and G in grams-for-kilograms units (x1000); concentrations also x0.001"
+  },
+  "solver_3_windows_G_(1+b*Kpw)_blend": {
+   "median_err_pct": 3.0,
+   "worst_err_pct": 11.2,
+   "within_20pct": "57/57",
+   "reward": 1
+  },
+  "diagnosis": "all three named the Kpw trend in disk-to-sheet ratio as DOC/colloid-bound uptake within their first fitting pass"
+ },
+ "wrong_answers": {
+  "one_G_per_site_over_integrative_compounds_(v3_textbook)": "23/57, median err 37%, worst 57%; 0/24 seeds",
+  "one_G_over_compounds_up_to_DEQ_0.5": "28/57",
+  "G_from_least_hydrophobic_integrative_compound": "45/57, 0/24 seeds",
+  "steady_state_30day_set_only": "23/57",
+  "constant_median_of_true_values": "5/57"
+ },
+ "margin": "every honest route 56-57/57 on the shipped data, best wrong answer 45/57; across 24 regenerations honest routes 21-24/24, wrong answers 0/24",
+ "enhancement_design": {
+  "form": "1 + phi_site * Kpw",
+  "at_pp-DDT": {
+   "Upper Malewa": 2.3,
+   "Middle Malewa": 2.9,
+   "Lake Naivasha": 2.6
+  },
+  "at_mirex": "3.5-4.9",
+  "at_HCB": "1.06-1.1",
+  "at_HCH": "1.00"
+ },
+ "F_band": "honest F within 3.5% on the shipped data; 10% band unchanged from v3 (see v3 trace: blank-handling slips reach 9.0%)"
+}

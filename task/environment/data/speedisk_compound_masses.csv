@@ -1,0 +1,172 @@
+site,sampler_id,deployed,deployment_days,compound,mass_ng
+Upper Malewa,UM-SD1,20 June 2016,30,endosulfan sulfate,350.962
+Upper Malewa,UM-SD1,20 June 2016,30,gamma-HCH,337.8381
+Upper Malewa,UM-SD1,20 June 2016,30,beta-HCH,191.3048
+Upper Malewa,UM-SD1,20 June 2016,30,alpha-HCH,481.9755
+Upper Malewa,UM-SD1,20 June 2016,30,alpha-endosulfan,173.7549
+Upper Malewa,UM-SD1,20 June 2016,30,heptachlor epoxide,23.4898
+Upper Malewa,UM-SD1,20 June 2016,30,methoxychlor,60.6699
+Upper Malewa,UM-SD1,20 June 2016,30,endrin,16.3638
+Upper Malewa,UM-SD1,20 June 2016,30,dieldrin,30.1849
+Upper Malewa,UM-SD1,20 June 2016,30,pp-DDD,22.4761
+Upper Malewa,UM-SD1,20 June 2016,30,heptachlor,13.4445
+Upper Malewa,UM-SD1,20 June 2016,30,aldrin,9.9838
+Upper Malewa,UM-SD1,20 June 2016,30,pp-DDE,41.848
+Upper Malewa,UM-SD1,20 June 2016,30,pp-DDT,29.8767
+Upper Malewa,UM-SD1,20 June 2016,30,HCB,17.215
+Upper Malewa,UM-SD1,20 June 2016,30,cis-chlordane,11.2949
+Upper Malewa,UM-SD1,20 June 2016,30,trans-chlordane,14.6301
+Upper Malewa,UM-SD1,20 June 2016,30,trans-nonachlor,9.2338
+Upper Malewa,UM-SD1,20 June 2016,30,mirex,10.2816
+Upper Malewa,UM-SD2,20 June 2016,30,endosulfan sulfate,409.2119
+Upper Malewa,UM-SD2,20 June 2016,30,gamma-HCH,336.8253
+Upper Malewa,UM-SD2,20 June 2016,30,beta-HCH,192.2423
+Upper Malewa,UM-SD2,20 June 2016,30,alpha-HCH,498.7471
+Upper Malewa,UM-SD2,20 June 2016,30,alpha-endosulfan,161.5931
+Upper Malewa,UM-SD2,20 June 2016,30,heptachlor epoxide,23.7992
+Upper Malewa,UM-SD2,20 June 2016,30,methoxychlor,54.8733
+Upper Malewa,UM-SD2,20 June 2016,30,endrin,16.2566
+Upper Malewa,UM-SD2,20 June 2016,30,dieldrin,35.8135
+Upper Malewa,UM-SD2,20 June 2016,30,pp-DDD,22.7534
+Upper Malewa,UM-SD2,20 June 2016,30,heptachlor,13.3004
+Upper Malewa,UM-SD2,20 June 2016,30,aldrin,10.2155
+Upper Malewa,UM-SD2,20 June 2016,30,pp-DDE,41.9412
+Upper Malewa,UM-SD2,20 June 2016,30,pp-DDT,32.0504
+Upper Malewa,UM-SD2,20 June 2016,30,HCB,20.3147
+Upper Malewa,UM-SD2,20 June 2016,30,cis-chlordane,11.2381
+Upper Malewa,UM-SD2,20 June 2016,30,trans-chlordane,14.9595
+Upper Malewa,UM-SD2,20 June 2016,30,trans-nonachlor,9.8646
+Upper Malewa,UM-SD2,20 June 2016,30,mirex,9.7439
+Upper Malewa,UM-SD3,20 June 2016,30,endosulfan sulfate,399.2871
+Upper Malewa,UM-SD3,20 June 2016,30,gamma-HCH,370.4169
+Upper Malewa,UM-SD3,20 June 2016,30,beta-HCH,194.5605
+Upper Malewa,UM-SD3,20 June 2016,30,alpha-HCH,465.5359
+Upper Malewa,UM-SD3,20 June 2016,30,alpha-endosulfan,171.7611
+Upper Malewa,UM-SD3,20 June 2016,30,heptachlor epoxide,22.7617
+Upper Malewa,UM-SD3,20 June 2016,30,methoxychlor,58.7078
+Upper Malewa,UM-SD3,20 June 2016,30,endrin,16.1678
+Upper Malewa,UM-SD3,20 June 2016,30,dieldrin,33.6033
+Upper Malewa,UM-SD3,20 June 2016,30,pp-DDD,22.9684
+Upper Malewa,UM-SD3,20 June 2016,30,heptachlor,11.9506
+Upper Malewa,UM-SD3,20 June 2016,30,aldrin,10.3004
+Upper Malewa,UM-SD3,20 June 2016,30,pp-DDE,44.2924
+Upper Malewa,UM-SD3,20 June 2016,30,pp-DDT,30.7192
+Upper Malewa,UM-SD3,20 June 2016,30,HCB,18.8442
+Upper Malewa,UM-SD3,20 June 2016,30,cis-chlordane,11.6653
+Upper Malewa,UM-SD3,20 June 2016,30,trans-chlordane,13.8848
+Upper Malewa,UM-SD3,20 June 2016,30,trans-nonachlor,11.0538
+Upper Malewa,UM-SD3,20 June 2016,30,mirex,10.2439
+Middle Malewa,MM-SD1,20 June 2016,30,endosulfan sulfate,1331.417
+Middle Malewa,MM-SD1,20 June 2016,30,gamma-HCH,1281.7617
+Middle Malewa,MM-SD1,20 June 2016,30,beta-HCH,302.8799
+Middle Malewa,MM-SD1,20 June 2016,30,alpha-HCH,1011.855
+Middle Malewa,MM-SD1,20 June 2016,30,alpha-endosulfan,748.8451
+Middle Malewa,MM-SD1,20 June 2016,30,heptachlor epoxide,64.7781
+Middle Malewa,MM-SD1,20 June 2016,30,methoxychlor,245.7484
+Middle Malewa,MM-SD1,20 June 2016,30,endrin,36.3597
+Middle Malewa,MM-SD1,20 June 2016,30,dieldrin,98.083
+Middle Malewa,MM-SD1,20 June 2016,30,pp-DDD,59.8622
+Middle Malewa,MM-SD1,20 June 2016,30,heptachlor,35.7603
+Middle Malewa,MM-SD1,20 June 2016,30,aldrin,45.5462
+Middle Malewa,MM-SD1,20 June 2016,30,pp-DDE,86.2726
+Middle Malewa,MM-SD1,20 June 2016,30,pp-DDT,116.7891
+Middle Malewa,MM-SD1,20 June 2016,30,HCB,46.9233
+Middle Malewa,MM-SD1,20 June 2016,30,cis-chlordane,35.13
+Middle Malewa,MM-SD1,20 June 2016,30,trans-chlordane,43.5704
+Middle Malewa,MM-SD1,20 June 2016,30,trans-nonachlor,30.1827
+Middle Malewa,MM-SD1,20 June 2016,30,mirex,38.3827
+Middle Malewa,MM-SD2,20 June 2016,30,endosulfan sulfate,1296.5557
+Middle Malewa,MM-SD2,20 June 2016,30,gamma-HCH,1175.7757
+Middle Malewa,MM-SD2,20 June 2016,30,beta-HCH,357.6442
+Middle Malewa,MM-SD2,20 June 2016,30,alpha-HCH,990.6943
+Middle Malewa,MM-SD2,20 June 2016,30,alpha-endosulfan,721.2061
+Middle Malewa,MM-SD2,20 June 2016,30,heptachlor epoxide,52.6823
+Middle Malewa,MM-SD2,20 June 2016,30,methoxychlor,264.4877
+Middle Malewa,MM-SD2,20 June 2016,30,endrin,32.881
+Middle Malewa,MM-SD2,20 June 2016,30,dieldrin,101.659
+Middle Malewa,MM-SD2,20 June 2016,30,pp-DDD,53.3971
+Middle Malewa,MM-SD2,20 June 2016,30,heptachlor,37.8582
+Middle Malewa,MM-SD2,20 June 2016,30,aldrin,40.1472
+Middle Malewa,MM-SD2,20 June 2016,30,pp-DDE,86.5046
+Middle Malewa,MM-SD2,20 June 2016,30,pp-DDT,110.0984
+Middle Malewa,MM-SD2,20 June 2016,30,HCB,46.4149
+Middle Malewa,MM-SD2,20 June 2016,30,cis-chlordane,36.0752
+Middle Malewa,MM-SD2,20 June 2016,30,trans-chlordane,38.5805
+Middle Malewa,MM-SD2,20 June 2016,30,trans-nonachlor,29.1333
+Middle Malewa,MM-SD2,20 June 2016,30,mirex,40.8421
+Middle Malewa,MM-SD3,20 June 2016,30,endosulfan sulfate,1425.4063
+Middle Malewa,MM-SD3,20 June 2016,30,gamma-HCH,1231.6641
+Middle Malewa,MM-SD3,20 June 2016,30,beta-HCH,375.6593
+Middle Malewa,MM-SD3,20 June 2016,30,alpha-HCH,1009.8757
+Middle Malewa,MM-SD3,20 June 2016,30,alpha-endosulfan,784.739
+Middle Malewa,MM-SD3,20 June 2016,30,heptachlor epoxide,52.2735
+Middle Malewa,MM-SD3,20 June 2016,30,methoxychlor,254.4322
+Middle Malewa,MM-SD3,20 June 2016,30,endrin,38.1005
+Middle Malewa,MM-SD3,20 June 2016,30,dieldrin,98.9669
+Middle Malewa,MM-SD3,20 June 2016,30,pp-DDD,54.7397
+Middle Malewa,MM-SD3,20 June 2016,30,heptachlor,38.2118
+Middle Malewa,MM-SD3,20 June 2016,30,aldrin,44.3822
+Middle Malewa,MM-SD3,20 June 2016,30,pp-DDE,82.2514
+Middle Malewa,MM-SD3,20 June 2016,30,pp-DDT,128.5788
+Middle Malewa,MM-SD3,20 June 2016,30,HCB,52.2864
+Middle Malewa,MM-SD3,20 June 2016,30,cis-chlordane,34.0995
+Middle Malewa,MM-SD3,20 June 2016,30,trans-chlordane,42.6273
+Middle Malewa,MM-SD3,20 June 2016,30,trans-nonachlor,27.7911
+Middle Malewa,MM-SD3,20 June 2016,30,mirex,40.4795
+Lake Naivasha,LN-SD1,20 June 2016,30,endosulfan sulfate,542.9923
+Lake Naivasha,LN-SD1,20 June 2016,30,gamma-HCH,150.6537
+Lake Naivasha,LN-SD1,20 June 2016,30,beta-HCH,102.1815
+Lake Naivasha,LN-SD1,20 June 2016,30,alpha-HCH,202.8467
+Lake Naivasha,LN-SD1,20 June 2016,30,alpha-endosulfan,41.2372
+Lake Naivasha,LN-SD1,20 June 2016,30,heptachlor epoxide,15.4535
+Lake Naivasha,LN-SD1,20 June 2016,30,methoxychlor,13.4621
+Lake Naivasha,LN-SD1,20 June 2016,30,endrin,7.9836
+Lake Naivasha,LN-SD1,20 June 2016,30,dieldrin,18.4804
+Lake Naivasha,LN-SD1,20 June 2016,30,pp-DDD,21.9936
+Lake Naivasha,LN-SD1,20 June 2016,30,heptachlor,5.9544
+Lake Naivasha,LN-SD1,20 June 2016,30,aldrin,3.4042
+Lake Naivasha,LN-SD1,20 June 2016,30,pp-DDE,49.1223
+Lake Naivasha,LN-SD1,20 June 2016,30,pp-DDT,9.8224
+Lake Naivasha,LN-SD1,20 June 2016,30,HCB,11.5431
+Lake Naivasha,LN-SD1,20 June 2016,30,cis-chlordane,7.2363
+Lake Naivasha,LN-SD1,20 June 2016,30,trans-chlordane,8.4844
+Lake Naivasha,LN-SD1,20 June 2016,30,trans-nonachlor,6.5907
+Lake Naivasha,LN-SD1,20 June 2016,30,mirex,6.4427
+Lake Naivasha,LN-SD2,20 June 2016,30,endosulfan sulfate,631.7882
+Lake Naivasha,LN-SD2,20 June 2016,30,gamma-HCH,171.7215
+Lake Naivasha,LN-SD2,20 June 2016,30,beta-HCH,94.1825
+Lake Naivasha,LN-SD2,20 June 2016,30,alpha-HCH,210.1843
+Lake Naivasha,LN-SD2,20 June 2016,30,alpha-endosulfan,38.1108
+Lake Naivasha,LN-SD2,20 June 2016,30,heptachlor epoxide,14.0786
+Lake Naivasha,LN-SD2,20 June 2016,30,methoxychlor,13.0395
+Lake Naivasha,LN-SD2,20 June 2016,30,endrin,8.9286
+Lake Naivasha,LN-SD2,20 June 2016,30,dieldrin,17.9527
+Lake Naivasha,LN-SD2,20 June 2016,30,pp-DDD,21.74
+Lake Naivasha,LN-SD2,20 June 2016,30,heptachlor,6.2509
+Lake Naivasha,LN-SD2,20 June 2016,30,aldrin,3.5666
+Lake Naivasha,LN-SD2,20 June 2016,30,pp-DDE,50.6752
+Lake Naivasha,LN-SD2,20 June 2016,30,pp-DDT,11.1325
+Lake Naivasha,LN-SD2,20 June 2016,30,HCB,12.1456
+Lake Naivasha,LN-SD2,20 June 2016,30,cis-chlordane,6.2525
+Lake Naivasha,LN-SD2,20 June 2016,30,trans-chlordane,8.2376
+Lake Naivasha,LN-SD2,20 June 2016,30,trans-nonachlor,6.3976
+Lake Naivasha,LN-SD2,20 June 2016,30,mirex,7.1479
+Lake Naivasha,LN-SD3,20 June 2016,30,endosulfan sulfate,608.483
+Lake Naivasha,LN-SD3,20 June 2016,30,gamma-HCH,178.3099
+Lake Naivasha,LN-SD3,20 June 2016,30,beta-HCH,101.3536
+Lake Naivasha,LN-SD3,20 June 2016,30,alpha-HCH,218.8097
+Lake Naivasha,LN-SD3,20 June 2016,30,alpha-endosulfan,42.0734
+Lake Naivasha,LN-SD3,20 June 2016,30,heptachlor epoxide,14.8248
+Lake Naivasha,LN-SD3,20 June 2016,30,methoxychlor,14.198
+Lake Naivasha,LN-SD3,20 June 2016,30,endrin,8.3418
+Lake Naivasha,LN-SD3,20 June 2016,30,dieldrin,18.3514
+Lake Naivasha,LN-SD3,20 June 2016,30,pp-DDD,23.93
+Lake Naivasha,LN-SD3,20 June 2016,30,heptachlor,6.0549
+Lake Naivasha,LN-SD3,20 June 2016,30,aldrin,3.4099
+Lake Naivasha,LN-SD3,20 June 2016,30,pp-DDE,48.3147
+Lake Naivasha,LN-SD3,20 June 2016,30,pp-DDT,9.9207
+Lake Naivasha,LN-SD3,20 June 2016,30,HCB,11.7061
+Lake Naivasha,LN-SD3,20 June 2016,30,cis-chlordane,6.5033
+Lake Naivasha,LN-SD3,20 June 2016,30,trans-chlordane,7.4018
+Lake Naivasha,LN-SD3,20 June 2016,30,trans-nonachlor,6.1032
+Lake Naivasha,LN-SD3,20 June 2016,30,mirex,6.3817

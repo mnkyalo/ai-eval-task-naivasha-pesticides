@@ -1,0 +1,12 @@
+submission                                       reward expect within 20%  failed
+--------------------------------------------------------------------------------------------------------
+reference (solution/reference_solution.py)            1      1      57/57  -
+honest: sheets + disk with fitted binding term        1      1      57/57  -
+wrong: one Speedisk G per site (textbook)             0      0      23/57  concentrations_within_tolerance
+wrong: G from least hydrophobic compound              0      0      32/57  concentrations_within_tolerance
+wrong: steady-state inversion of 30-day set           0      0      38/57  concentrations_within_tolerance
+NOT CAUGHT: procedural blanks ignored                 1      1      57/57  -
+wrong: sheet mass in g, not kg (F x1000)              0      0       0/57  concentrations_within_tolerance, sampling_rates
+wrong: one constant for every value                   0      0       9/57  concentrations_within_tolerance
+--------------------------------------------------------------------------------------------------------
+ALL EXPECTATIONS MET

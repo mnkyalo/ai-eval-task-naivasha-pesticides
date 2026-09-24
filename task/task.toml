@@ -1,0 +1,122 @@
+artifacts = ["/app/answer.csv", "/app/sampling_rates.csv"]
+
+[task]
+name = "mnkyalo/naivasha-pesticide-sampling"
+
+[metadata]
+author_name = "Margaret Kyalo"
+author_email = "mnkyalo22@gmail.com"
+
+difficulty_explanation = """
+The data look like four replicate silicone sampler sets at each site plus a second sampler type, and the brief \
+says the sets differ only in how long they were in the water. Three things have to be recognised in turn. \
+First, a partitioning passive sampler is an exponentially-weighted integrator whose memory length is \
+compound-specific (tau = Kpw*m/Rs, spanning about 0.1 to 1500 days across this 19-compound set), and the water \
+concentration fell 1.9x to 4.5x over the campaign, so a sheet at equilibrium reports the concentration at \
+retrieval while one still integrating reports a running average, and the four sets disagree in order of tau. \
+Taking the 30-day set because it spans the requested period understates the fast compounds by up to 2.4x and \
+scores 23 of 57 inside tolerance. Second, the co-deployed Speedisk adsorption samplers integrate linearly for \
+every compound but carry no PRCs, so their sampling rate has to be calibrated in situ against the sheets, \
+and only against compounds for which the sheet is itself still integrative. Third, and this is where the previous \
+version was solved by every probe, an adsorptive disk also collects compound carried on dissolved organic matter, \
+which the partitioning sheet does not see. The excess rises with hydrophobicity, from about 1.1x at HCB to \
+3 to 5x at mirex, so the textbook calibration, one Speedisk coefficient per site taken over the integrative compounds, \
+is 1.6 to 2.2x too high, and every equilibrated compound, whose 30-day average rests entirely on the disk, \
+comes out low by that factor. That answer scores 23 of 57 inside tolerance, reward 0. 
+
+Calibrating on the single least hydrophobic integrative compound instead reaches 45 of 57 and still fails. \
+A correct answer needs the binding term fitted as a second site-level parameter and the freely dissolved value \
+extrapolated to it, or the disk restricted to compounds where the term is negligible with the site profile \
+carrying the rest. For a human the work is a chain that has to hold end to end. Blank-correct each sampler \
+type against its own procedural blanks, fit one hydrodynamic coefficient per site from PRC dissipation, derive \
+per-compound exchange rates, recognise the set-dependence, see that per-compound deconvolution is singular for \
+the compounds whose sheets retain no memory beyond a day, bring in the disks for exactly those compounds, \
+and then notice that the disk-to-sheet ratio is a trend against Kpw rather than scatter and decide what that means \
+for a freely dissolved estimate. The dataset is synthetic. It follows the design of a published June-July 2016 \
+passive-sampling campaign in the Lake Naivasha basin (sites, sheet geometry and polymer, PRC suite, \
+co-deployed Speedisks, 30-day period), extended with five legacy organochlorines routinely reported in East \
+African surveys, with partition coefficients from a published Kow correlation, literature-scale replicate \
+scatter (5 to 7 percent), procedural-blank carryover and a DOC-associated uptake term of the size reported for \
+adsorption-based samplers. This analysis is done professionally by environmental analytical chemists who run \
+passive-sampling monitoring of hydrophobic contaminants for water-quality programmes.
+"""
+
+solution_explanation = """
+Blank-correct every measured mass with the mean of the three procedural blanks of its own sampler type, \
+including the reference sheets. Compute PRC retained fraction f = (N_exposed - blank)/(N_ref - blank). \
+Derive the sheet from its stated geometry, A = 2 x 5.5 x 9.0 = 99 cm2 and m = 5.5 x 9.0 x 0.05 x 1.15 = 2.8462 g. \
+Fit one F per site by non-linear least squares on f against exp(-Rs*t/(Kpw*m)) with Rs = F*A/M^0.47, \
+giving F = 0.944 (Upper Malewa), 1.955 (Middle Malewa), 0.289 (Lake Naivasha), a sevenfold hydrodynamic range, \
+river reach versus open lake. For each target compound ke = Rs/(Kpw*m). The four sheet sets share a retrieval date \
+and differ in start day (27, 20, 10, 0), so each is an exponentially-weighted integral over a different \
+window, while a Speedisk far below capacity is a plain integral of the compound reaching it, which is the \
+freely dissolved compound plus a DOC-associated excess proportional to Kpw, N_SD = (G/M^0.47) x (1 + phi*Kpw) \
+x TWA x 30. Model Cw(t) = C0*exp(-lambda*t) with one lambda, one G and one phi per site and one amplitude per compound, \
+and fit every sheet and every Speedisk jointly on the log scale, weighted by the replicate scatter of each sampler type. \
+The compounds the sheets still integrate, mirex down to HCB, span the enhancement from about 4x to about 1.1x \
+and pin G and phi separately, while the equilibrated compounds sit at enhancement 1.00 and take G alone. \
+Fitted lambda = 0.0279, 0.0499, 0.0223 per day, G = 27.7, 43.6, 11.4 and phi*Kpw at pp-DDT = 1.41, 1.90, \
+1.76. Report C0*(1-exp(-lambda*T))/(lambda*T) with T = 30. Values range from 0.06 ng/L (mirex,Upper Malewa) \
+to about 31 ng/L (endosulfan sulfate, Lake Naivasha). An assumption-free route, piecewise-constant concentration \
+on the four deployment intervals for the integrative compounds, G and phi fitted on those, disk reported for the rest, \
+is equally defensible and lands within 12 percent of truth on every value.
+"""
+
+verification_explanation = """
+The verifier reads two artifacts, /app/answer.csv and /app/sampling_rates.csv, and grades against a frozen key \
+generated by the seeded generator shipped in tests/ (build.py, params.py, seed 20160620), so ground truth is \
+reproducible and not asserted. Rules. answer.csv must parse, carry all 57 site x compound rows exactly \
+once with finite positive values, at least 54 of the 57 concentrations must be within 20% relative of key, \
+and all three F values within 10%. Reward is binary and written to /logs/verifier/reward.txt on every code path, \
+including a pytest crash, because test.sh does not use set -e and branches on the exit code. The tolerance is measured, \
+not chosen. The reference solution scores worst-case 5.7% error. Five defensible variants (which compounds calibrate the disk, \
+whether the binding term is fitted linear in Kpw, whether the sheet average is formed by the shared profile or by \
+the nested windows, whether the disk is reported for every compound) score 57 of 57 with worst cases of 8.5 to 11.8%. \
+Regenerating the whole dataset at 24 seeds, those variants pass 23 to 24 of 24 and the reference 24 of 24, \
+while a three-parameter free-exponent form of the binding term passes 21 of 24. Two fresh solver agents given \
+only the solver-facing files scored 57 of 57 with worst cases of 5.8 and 11.2%, and a third had every mechanism right \
+and failed on a unit conversion in F (grams for kilograms).
+
+Against that, one Speedisk coefficient per site over the integrative compounds scores 23 of 57 inside 20%, \
+the same over compounds up to 50% of equilibrium 28 of 57, the least hydrophobic integrative compound alone 45 of \
+57, steady-state inversion of the 30-day set 23 of 57, and a constant answer 5 of 57. A 20% band with a 54 of \
+57 bar therefore sits above every honest implementation and below every wrong one. Every rule the verifier \
+enforces corresponds to a stated requirement in instruction.md, the 57 rows, the exact column names, the ng/L \
+unit, the freely dissolved estimand, the 30-day averaging period, and the F definition including the \
+both-faces, edges-excluded area convention.
+"""
+
+category = "Science"
+subcategory = "Environmental Science"
+tags = ["environmental-chemistry", "passive-sampling", "parameter-estimation", "time-series-deconvolution", "in-situ-calibration", "sampler-artefact"]
+expert_time_estimate_hours = 5
+
+relevant_experience = """
+Aquatic ecologist trained and field-experienced in the lakes of the East African Rift Valley. BSc in Botany and Zoology \
+and MSc in Hydrobiology from the University of Nairobi, with an MSc thesis on the alkaline-saline lakes of the eastern \
+Rift that included Lakes Naivasha, Sonachi and Oloidien. Worked as a research assistant on a research project covering \
+those same three lakes, so the sites, hydrology and sampling conditions in this task are ones I know first hand. \
+
+Co-author of a peer-reviewed study of DDT contamination in the sediments of Lakes Natron and Bogoria (Bettinetti et al. 2011, AMBIO), \
+which is the same class of organochlorine pesticide this task quantifies. 
+
+First author of a 2023 Freshwater Biology paper on two Kenyan crater lakes. Doctoral training in trace-level laboratory work \
+with strict blank and contamination control at the University of Potsdam. 
+
+Since 2018 I have worked as an AI evaluation specialist, designing and fact-checking benchmark tasks, which is the basis \
+for the grading design here.
+"""
+
+[verifier]
+timeout_sec = 300.0
+environment_mode = "separate"
+
+[agent]
+timeout_sec = 7200.0
+
+[environment]
+build_timeout_sec = 1800.0
+cpus = 2
+memory_mb = 4096
+storage_mb = 10240
+gpus = 0
