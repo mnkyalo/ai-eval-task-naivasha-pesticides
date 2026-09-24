@@ -175,5 +175,5 @@ I'm also candid about what the evidence says now. In my own probe, 2 of 3 fresh 
 **Margaret Kyalo-Omamo** is an aquatic ecologist trained in the lakes of the East African Rift (MSc Hydrobiology, University of Nairobi, with fieldwork on Lakes Naivasha, Sonachi and Oloidien; PhD research in sedimentary ancient DNA, University of Potsdam). She has worked as an AI evaluation specialist since 2018, designing research-grade benchmark tasks, grading schemes and adversarial red-team probes.
 
 - Co-author, [Bettinetti et al. 2011, *AMBIO* 40:341–350](https://doi.org/10.1007/s13280-011-0142-8), on DDT contamination in the sediments of Lakes Natron and Bogoria
-- First author, [Kyalo-Omamo et al. 2023, *Freshwater Biology* 68:1894–1916](https://doi.org/10.1111/fwb.14093)
+- First author, [Kyalo-Omamo et al. 2023, *Freshwater Biology* 68:1894–1916](https://doi.org/10.1111/fwb.14093) on sedaDNA of rotifers and 200 years of climate change in two Kenyan crater lakes
 - More tasks: [github.com/mnkyalo](https://github.com/mnkyalo)
