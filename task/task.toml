@@ -91,22 +91,6 @@ subcategory = "Environmental Science"
 tags = ["environmental-chemistry", "passive-sampling", "parameter-estimation", "time-series-deconvolution", "in-situ-calibration", "sampler-artefact"]
 expert_time_estimate_hours = 5
 
-relevant_experience = """
-Aquatic ecologist trained and field-experienced in the lakes of the East African Rift Valley. BSc in Botany and Zoology \
-and MSc in Hydrobiology from the University of Nairobi, with an MSc thesis on the alkaline-saline lakes of the eastern \
-Rift that included Lakes Naivasha, Sonachi and Oloidien. Worked as a research assistant on a research project covering \
-those same three lakes, so the sites, hydrology and sampling conditions in this task are ones I know first hand. \
-
-Co-author of a peer-reviewed study of DDT contamination in the sediments of Lakes Natron and Bogoria (Bettinetti et al. 2011, AMBIO), \
-which is the same class of organochlorine pesticide this task quantifies. 
-
-First author of a 2023 Freshwater Biology paper on two Kenyan crater lakes. Doctoral training in trace-level laboratory work \
-with strict blank and contamination control at the University of Potsdam. 
-
-Since 2018 I have worked as an AI evaluation specialist, designing and fact-checking benchmark tasks, which is the basis \
-for the grading design here.
-"""
-
 [verifier]
 timeout_sec = 300.0
 environment_mode = "separate"
