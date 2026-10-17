@@ -177,4 +177,12 @@ I'm also candid about what the evidence says now. In my own probe, 2 of 3 fresh 
 
 - Co-author, [Bettinetti et al. 2011, *AMBIO* 40:341–350](https://doi.org/10.1007/s13280-011-0142-8), on DDT contamination in the sediments of Lakes Natron and Bogoria
 - First author, [Kyalo-Omamo et al. 2023, *Freshwater Biology* 68:1894–1916](https://doi.org/10.1111/fwb.14093) on sedaDNA of rotifers and 200 years of climate change in two Kenyan crater lakes
-- More tasks: [github.com/mnkyalo](https://github.com/mnkyalo)
+- GitHub: [@mnkyalo](https://github.com/mnkyalo)
+
+## 📬 Connect With Me
+
+* **Email:** [mnkyalo22@gmail.com](mailto:mnkyalo22@gmail.com)
+* **Google Scholar:** [Margaret Kyalo-Omamo](https://scholar.google.com/citations?user=xZrmmqwAAAAJ&hl=en)
+* **ORCID:** [0000-0001-7864-0487](https://orcid.org/0000-0001-7864-0487)
+* **LinkedIn:** [margaret-kyalo-n](https://www.linkedin.com/in/margaret-kyalo-n/)
+* **Location:** Kenya
