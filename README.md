@@ -6,6 +6,7 @@
 ![format: Harbor](https://img.shields.io/badge/format-Harbor-2b6cb0)
 ![runtime: Docker](https://img.shields.io/badge/runtime-Docker-2496ed)
 ![python 3.11+](https://img.shields.io/badge/python-3.11%2B-3776ab)
+[![DOI](https://zenodo.org/badge/1385132645.svg)](https://doi.org/10.5281/zenodo.23034695)
 
 This repository holds a complete scientific-computing task in the [Harbor](https://www.harborframework.com/docs/tasks) format, the framework behind Terminal-Bench. An AI agent is given a Docker container with the full data from a month-long passive-sampling campaign at three sites in the Lake Naivasha basin, Kenya. That means 504 PRC measurements, 684 target-compound measurements on silicone sheets, 171 Speedisk measurements and procedural blanks for both sampler types. From these it must report the 30-day time-weighted average freely dissolved concentration of 19 organochlorine pesticides at each site. A separate verifier container then scores the answer as pass or fail.
 
